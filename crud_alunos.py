@@ -1,10 +1,11 @@
+# Para executar: python3 crud_alunos.py
+
 
 alunos: list[dict] = []
 _sequencial_por_curso: dict[str, int] = {}
 
 
 def gerar_matricula(sigla_curso: str) -> str:
-    """Gera matrícula no formato SIGLA + número sequencial (ex.: GES1, GES2)."""
     sigla = sigla_curso.strip().upper()
     if not sigla:
         raise ValueError("Sigla do curso não pode ser vazia.")
@@ -24,7 +25,6 @@ def _indice_por_matricula(matricula: str) -> int | None:
 
 
 def cadastrar_aluno() -> None:
-    """Create: lê dados e adiciona um aluno à lista."""
     nome = input("Nome: ").strip()
     if not nome:
         print("Nome inválido.")
@@ -58,7 +58,7 @@ def cadastrar_aluno() -> None:
 
 
 def listar_alunos() -> None:
-    """Read: exibe todos os alunos."""
+
     if not alunos:
         print("Nenhum aluno cadastrado.")
         return
@@ -71,7 +71,6 @@ def listar_alunos() -> None:
 
 
 def buscar_aluno() -> None:
-    """Read: busca e exibe um aluno pela matrícula."""
     matricula = input("Matrícula: ").strip()
     idx = _indice_por_matricula(matricula)
     if idx is None:
@@ -87,7 +86,6 @@ def buscar_aluno() -> None:
 
 
 def atualizar_aluno() -> None:
-    """Update: altera dados de um aluno; se o curso mudar, gera nova matrícula."""
     matricula = input("Matrícula do aluno a atualizar: ").strip()
     idx = _indice_por_matricula(matricula)
     if idx is None:
@@ -122,7 +120,6 @@ def atualizar_aluno() -> None:
 
 
 def remover_aluno() -> None:
-    """Delete: remove um aluno pela matrícula."""
     matricula = input("Matrícula do aluno a remover: ").strip()
     idx = _indice_por_matricula(matricula)
     if idx is None:
