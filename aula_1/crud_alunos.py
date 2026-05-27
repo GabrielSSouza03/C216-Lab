@@ -22,7 +22,7 @@ def _indice_por_matricula(matricula: str) -> int | None:
         if aluno["matricula"] == matricula:
             return i
     return None
-
+/home/gabriel/GABRIEL/Cursinho/P10/C216/LAB/C216-Lab/crud_alunos.py
 
 def cadastrar_aluno() -> None:
     nome = input("Nome: ").strip()
