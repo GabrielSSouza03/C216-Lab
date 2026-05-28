@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Logs frontend</title>
+  <style>
+    body { margin: 0; background: #111827; color: #e5e7eb; font-family: monospace; }
+    main { padding: 24px; }
+    h1 { font-family: Arial, sans-serif; margin-top: 0; color: #f9fafb; }
+    pre { white-space: pre-wrap; line-height: 1.35; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Logs do container frontend</h1>
+    <pre>frontend-1  |  * Serving Flask app &#x27;app&#x27;
+frontend-1  |  * Debug mode: on
+frontend-1  | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+frontend-1  |  * Running on all addresses (0.0.0.0)
+frontend-1  |  * Running on http://127.0.0.1:3000
+frontend-1  |  * Running on http://172.18.0.4:3000
+frontend-1  | [33mPress CTRL+C to quit[0m
+frontend-1  |  * Restarting with stat
+frontend-1  |  * Debugger is active!
+frontend-1  |  * Debugger PIN: 100-024-850
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:09:55] &quot;GET / HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:09:55] &quot;GET /about HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:09:55] &quot;GET /contact HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:46] &quot;GET / HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:46] &quot;[33mGET /favicon.ico HTTP/1.1[0m&quot; 404 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:47] &quot;GET /about HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:47] &quot;[33mGET /favicon.ico HTTP/1.1[0m&quot; 404 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:47] &quot;GET /contact HTTP/1.1&quot; 200 -
+frontend-1  | 172.18.0.1 - - [28/May/2026 00:10:47] &quot;[33mGET /favicon.ico HTTP/1.1[0m&quot; 404 -
+</pre>
+  </main>
+</body>
+</html>
